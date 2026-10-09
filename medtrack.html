@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Med Track – Never Miss a Dose</title>
+<style>
+:root{--bg:#f6fbfa;--card:#fff;--text:#12303a;--muted:#5b7580;--accent:#0f9d8a;--accent2:#0b6e7a;--line:#d8e8e6;--onacc:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1b1f;--card:#14272d;--text:#e6f2f1;--muted:#93aeb3;--accent:#2fc9b3;--accent2:#6fe0d0;--line:#23393f;--onacc:#06201c}}
+:root[data-theme="dark"]{--bg:#0d1b1f;--card:#14272d;--text:#e6f2f1;--muted:#93aeb3;--accent:#2fc9b3;--accent2:#6fe0d0;--line:#23393f;--onacc:#06201c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav{max-width:1000px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.25rem;color:var(--accent2);text-decoration:none}
+nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{color:var(--text);text-decoration:none;font-size:.95rem}
+nav ul a:hover{color:var(--accent)}
+section{max-width:1000px;margin:auto;padding:56px 20px}
+.hero{text-align:center;padding-top:72px}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.15;margin:.2em 0}
+.hero p{max-width:620px;margin:0 auto 24px;color:var(--muted);font-size:1.1rem}
+.pill{display:inline-block;background:var(--card);border:1px solid var(--line);color:var(--accent2);border-radius:99px;padding:4px 14px;font-size:.85rem}
+.btn{display:inline-block;background:var(--accent);color:var(--onacc);padding:13px 28px;border-radius:10px;font-weight:700;text-decoration:none;border:0;font-size:1rem;cursor:pointer}
+.btn:hover{opacity:.9}
+.banner{margin:40px auto 0;max-width:640px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:20px;padding:28px;color:var(--onacc);display:grid;gap:10px;text-align:left}
+.dose{background:rgba(255,255,255,.18);border-radius:12px;padding:10px 14px;display:flex;justify-content:space-between;font-weight:600}
+h2{font-size:1.8rem;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{margin:.2em 0 .3em;font-size:1.1rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.ic{font-size:1.8rem}
+.bars{display:grid;gap:12px}
+.bar{display:grid;grid-template-columns:90px 1fr 60px;align-items:center;gap:10px;font-size:.9rem}
+.track{background:var(--line);border-radius:99px;height:14px;overflow:hidden}
+.fill{height:100%;background:var(--accent);border-radius:99px}
+.note{font-size:.8rem;color:var(--muted);margin-top:12px}
+.gal{aspect-ratio:4/3;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:2.4rem;background:var(--card);border:1px dashed var(--line)}
+form{display:grid;gap:12px;max-width:520px}
+input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+footer{text-align:center;padding:28px 20px;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
+</style>
+</head>
+<body>
+<header><nav>
+<a class="logo" href="#home">💊 Med Track</a>
+<ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#finance">Financials</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav></header>
+
+<section id="home" class="hero">
+<span class="pill">Smarter medication management</span>
+<h1>Never miss a dose.<br>Stay on track with Med Track.</h1>
+<p>Reminders, refill tracking and dosage logs in one simple app, built for patients, families and caregivers.</p>
+<a class="btn" href="#contact">Get Early Access →</a>
+<div class="banner" aria-label="App preview">
+<div class="dose"><span>8:00 AM · Metformin</span><span>✓ Taken</span></div>
+<div class="dose"><span>2:00 PM · Vitamin D</span><span>⏰ Upcoming</span></div>
+<div class="dose"><span>9:00 PM · Atorvastatin</span><span>⏰ Upcoming</span></div>
+</div>
+</section>
+
+<section id="about">
+<h2>About Us</h2>
+<p class="sub">Healthcare works best when treatment is followed consistently.</p>
+<div class="grid">
+<div class="card"><div class="ic">🎯</div><h3>Vision</h3><p>A world where no one misses essential medication because of forgetfulness or confusion.</p></div>
+<div class="card"><div class="ic">🚀</div><h3>Mission</h3><p>Make medication management simple, reliable and private through accessible technology.</p></div>
+<div class="card"><div class="ic">📈</div><h3>Objectives</h3><p>Reduce missed doses, improve adherence, and support caregivers and clinics.</p></div>
+</div>
+<h3 style="margin-top:32px">Our Team</h3>
+<div class="grid">
+<div class="card"><div class="ic">👤</div><h3>[Founder Name]</h3><p>Founder &amp; CEO</p></div>
+<div class="card"><div class="ic">👤</div><h3>[Team Member]</h3><p>Technology Lead</p></div>
+<div class="card"><div class="ic">👤</div><h3>[Team Member]</h3><p>Operations &amp; Partnerships</p></div>
+</div>
+</section>
+
+<section id="services">
+<h2>Our Services</h2>
+<p class="sub">Everything you need to manage medicines with confidence.</p>
+<div class="grid">
+<div class="card"><div class="ic">⏰</div><h3>Smart Reminders</h3><p>Timely alerts for every dose, tailored to your schedule.</p></div>
+<div class="card"><div class="ic">📦</div><h3>Refill Tracking</h3><p>Know when stock runs low before it becomes a problem.</p></div>
+<div class="card"><div class="ic">📋</div><h3>Dosage Logs</h3><p>A clear history to share with your doctor.</p></div>
+<div class="card"><div class="ic">👨‍👩‍👧</div><h3>Caregiver Sharing</h3><p>Let family stay informed and help when needed.</p></div>
+</div>
+<p class="note">Plans: Free (core reminders) · Premium (refills, sharing, reports) · Partner plans for clinics, pharmacies and elder-care providers.</p>
+</section>
+
+<section id="finance">
+<h2>Financial Information</h2>
+<p class="sub">Transparency for investors and stakeholders.</p>
+<div class="card">
+<div class="bars">
+<div class="bar"><span>Subscriptions</span><div class="track"><div class="fill" style="width:50%"></div></div><span>50%</span></div>
+<div class="bar"><span>Partnerships</span><div class="track"><div class="fill" style="width:30%"></div></div><span>30%</span></div>
+<div class="bar"><span>Reports/Data</span><div class="track"><div class="fill" style="width:20%"></div></div><span>20%</span></div>
+</div>
+<p class="note">Illustrative revenue model. Replace with your own projections before presenting. Investment opportunities: contact us below.</p>
+</div>
+</section>
+
+<section id="gallery">
+<h2>Gallery</h2>
+<p class="sub">Prototypes, team and awareness events.</p>
+<div class="grid">
+<div class="gal">📱</div><div class="gal">👥</div><div class="gal">🩺</div><div class="gal">🎨</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p class="sub">Questions, partnerships or early access? Reach out.</p>
+<div class="contact">
+<div>
+<p>📍 [Your address], Nagpur, Maharashtra<br>✉️ hello@medtrack.example<br>📞 +91 00000 00000</p>
+</div>
+<form id="f">
+<input id="n" placeholder="Your name" required>
+<input id="e" type="email" placeholder="Your email" required>
+<textarea id="m" rows="4" placeholder="Your message" required></textarea>
+<button class="btn" type="submit">Send Message</button>
+</form>
+</div>
+</section>
+
+<footer>© 2026 Med Track. All rights reserved.</footer>
+<script>
+document.getElementById('f').addEventListener('submit',function(ev){
+ev.preventDefault();
+var b='Name: '+document.getElementById('n').value+'\nEmail: '+document.getElementById('e').value+'\n\n'+document.getElementById('m').value;
+location.href='mailto:hello@medtrack.example?subject='+encodeURIComponent('Med Track enquiry')+'&body='+encodeURIComponent(b);
+});
+</script>
+</body>
+</html>
